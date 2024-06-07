@@ -115,6 +115,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
                         <h2 class="cursive-font primary-color">Menu</h2>
                         <p>Beberapa pilihan menu kami</p>
+                        <input type="text" id="menu-search" class="form-control" placeholder="Search menu...">
                     </div>
                 </div>
                 <div class="row">
@@ -272,6 +273,47 @@
     <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('menu-search');
+        const menuItemsContainer = document.getElementById('menu-items');
+
+        searchInput.addEventListener('keyup', function() {
+            const query = searchInput.value.toLowerCase();
+
+            fetch(`/search?query=${query}`)
+                .then(response => response.json())
+                .then(menuItems => {
+                    // Clear current menu items
+                    menuItemsContainer.innerHTML = '';
+
+                    // Populate with search results
+                    menuItems.forEach(item => {
+                        const menuItem = document.createElement('div');
+                        menuItem.classList.add('col-lg-3', 'col-md-3', 'col-sm-6', 'menu-item');
+
+                        menuItem.innerHTML = `
+                            <a href="/" class="fh5co-card-item">
+                                <figure>
+                                    <img src="${item.image}" alt="Image" class="img-responsive">
+                                </figure>
+                                <div class="fh5co-text">
+                                    <h2>${item.name}</h2>
+                                    <p><span>Rp. ${item.price}</span></p>
+                                    @auth
+                                    <button class="btn btn-primary add-to-order">Pilih</button>
+                                    @endauth
+                                </div>
+                            </a>
+                        `;
+
+                        menuItemsContainer.appendChild(menuItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching search results:', error));
+        });
+    });
+    </script>
 </body>
 
 </html>
