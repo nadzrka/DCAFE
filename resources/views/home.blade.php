@@ -126,6 +126,9 @@
                             <div class="fh5co-text">
                                 <h2>Caffe Latte</h2>
                                 <p><span>Rp. 25.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -137,6 +140,9 @@
                             <div class="fh5co-text">
                                 <h2>Avocado Ice Cream</h2>
                                 <p><span>Rp. 22.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -148,6 +154,9 @@
                             <div class="fh5co-text">
                                 <h2>Espresso Coffe</h2>
                                 <p><span>Rp. 20.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -159,6 +168,9 @@
                             <div class="fh5co-text">
                                 <h2>Lemon Tea</h2>
                                 <p><span>Rp. 15.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -170,6 +182,9 @@
                             <div class="fh5co-text">
                                 <h2>French Fries</h2>
                                 <p><span>Rp. 17.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -181,6 +196,9 @@
                             <div class="fh5co-text">
                                 <h2>Hotdog</h2>
                                 <p><span>Rp. 25.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -192,6 +210,9 @@
                             <div class="fh5co-text">
                                 <h2>Burger</h2>
                                 <p><span>Rp. 30.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>
@@ -203,6 +224,9 @@
                             <div class="fh5co-text">
                                 <h2>Fried Chicken</h2>
                                 <p><span>Rp. 20.000</span></p>
+                                @auth
+                                <button class="btn btn-primary add-to-order">Pilih</button>
+                                @endauth
                             </div>
                         </a>
                     </div>

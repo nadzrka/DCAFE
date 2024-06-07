@@ -10,3 +10,6 @@ Route::post('login', [AuthController::class, 'doLogin']);
 Route::get('register', [AuthController::class, 'register']);
 Route::post('register', [AuthController::class, 'doRegister']);
 Route::get('logout', [AuthController::class, 'logout']);
+Route::get('/ordered-menu', 'OrderedMenuController@index')->name('ordered-menu.index');
+Route::post('/ordered-item', 'OrderedMenuController@store')->name('ordered-item.store');
+
