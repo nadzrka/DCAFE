@@ -14,4 +14,10 @@ class MenuItem extends Model
 
     // Define which attributes are mass assignable
     protected $fillable = ['name', 'price', 'image'];
+
+    public function showMenu()
+{
+    $menuitems = MenuItem::all(); // Retrieve all menu items from the database
+    return view('your-view-name', compact('menuitems'));
+}
 }

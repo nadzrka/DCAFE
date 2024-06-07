@@ -7,6 +7,14 @@ use App\Models\MenuItem; // Assuming you have a MenuItem model
 
 class MenuController extends Controller
 {
+
+    public function index()
+    {
+        $menuItems = MenuItem::all(); // Fetch all menu items from the database
+
+        return view('menu.index', compact('menuItems'));
+    }
+
     public function search(Request $request)
     {
         $query = $request->input('query');

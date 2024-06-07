@@ -19,6 +19,6 @@ Route::get('/search', [MenuController::class, 'search'])->name('search');
 // routes/web.php
 Route::get('/admin-menu', [AdminMenuController::class, 'index'])->name('admin.menu.index');
 Route::post('/admin-menu', [AdminMenuController::class, 'store'])->name('admin.menu.store');
-
+Route::get('/menu', [MenuController::class, 'index']);
 
 
